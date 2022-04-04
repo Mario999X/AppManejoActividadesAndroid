@@ -21,7 +21,7 @@ public class ActivityUsuario extends AppCompatActivity {
         if (extras != null){
             nombreString = extras.getString("nombre");
         }
-        textViewBienvenido.setText(nombreString);
+        textViewBienvenido.setText("Bienvenido " + nombreString);
     }
 
     // Para el boton de Atrás, se crearia un nuevo Intent, pero yo prefiero dejarlo con la flecha (Manifest)
