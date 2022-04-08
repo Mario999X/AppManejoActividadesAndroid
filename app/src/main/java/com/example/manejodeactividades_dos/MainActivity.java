@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText editTextNombre, editTextPassw;
+    EditText editTextNombreEdad, editTextEdad;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,23 +18,23 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void verMenuPersona(View view){
-        editTextNombre = findViewById(R.id.editTextNombre);
-        editTextPassw = findViewById(R.id.editTextPassw);
+    public void verMenuPersona(View view) {
+        editTextNombreEdad = findViewById(R.id.editTextNombreEdad);
+        editTextEdad = findViewById(R.id.editTextEdad);
 
-        if (editTextNombre.getText().toString().trim().length() > 0 && editTextPassw.getText().toString().trim().equals("Perico1")) {
-            Intent intent = new Intent(MainActivity.this, ActivityUsuario.class);
-            intent.putExtra("nombre", editTextNombre.getText().toString());
+        if (editTextNombreEdad.getText().toString().trim().length() > 0 && editTextEdad.getText().toString().trim().length() > 0) {
+            Intent intent = new Intent(MainActivity.this, ActivityEdadUsuario.class);
+            intent.putExtra("nombre", editTextNombreEdad.getText().toString());
+            intent.putExtra("edad", editTextEdad.getText().toString());
             startActivity(intent);
-            editTextPassw.setText("");
 
         } else {
-            Toast.makeText(this, "Algún campo esta vacio o contraseña incorrecta", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Algún campo esta vacio", Toast.LENGTH_SHORT).show();
         }
     }
 
-    public void verMenuInfo(View view){
-        Intent intent = new Intent(MainActivity.this, ActivityInfo.class);
+    public void verMenuInfo(View view) {
+        Intent intent = new Intent(MainActivity.this, ActivityFormulario.class);
         startActivity(intent);
     }
 }

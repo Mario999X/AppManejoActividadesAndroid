@@ -18,11 +18,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ActivityUsuario"
+        <activity android:name=".ActivityEdadUsuario"
             android:exported="true"
             android:parentActivityName=".MainActivity">
         </activity>
-        <activity android:name=".ActivityInfo"
+        <activity android:name=".ActivityFormulario"
             android:exported="true"
             android:parentActivityName=".MainActivity">
         </activity>
